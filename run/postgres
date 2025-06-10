@@ -1,0 +1,8 @@
+docker run --name postgresql \
+  --restart unless-stopped \
+  -e POSTGRES_USER=access_user \
+  -e POSTGRES_PASSWORD=access_password \
+  -e POSTGRES_DB=database_name \
+  -v pgdata:/var/lib/postgresql/data \
+  -p 5432:5432 \
+  -d postgres:latest

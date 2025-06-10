@@ -1,0 +1,9 @@
+docker run --name mysql-server \
+  --restart unless-stopped \
+  -e MYSQL_ROOT_PASSWORD=mysecretpassword \
+  -e MYSQL_DATABASE=mydatabase \
+  -e MYSQL_USER=myuser \
+  -e MYSQL_PASSWORD=myuserpassword \
+  -v mysql_data:/var/lib/mysql \
+  -p 3306:3306 \
+  -d mysql:latest

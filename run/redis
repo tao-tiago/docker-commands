@@ -1,0 +1,7 @@
+docker run \
+  --name redis-server \
+  --restart unless-stopped \
+  -p 6379:6379 \
+  -v redis_data:/data \
+  -d redis:latest \
+  redis-server --appendonly yes
